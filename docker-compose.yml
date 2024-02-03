@@ -3,6 +3,6 @@ services:
   main:
     build: .
     ports:
-      - "8000:3000"
+      - "8080:3000"
     command: yarn start
     restart: unless-stopped

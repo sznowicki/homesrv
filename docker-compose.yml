@@ -5,3 +5,4 @@ services:
     ports:
       - "8000:3000"
     command: yarn start
+    restart: unless-stopped

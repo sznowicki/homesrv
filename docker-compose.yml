@@ -6,3 +6,13 @@ services:
       - "8080:3000"
     command: yarn start
     restart: unless-stopped
+  mongodb:
+    image: mongo:7.0.5
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME:
+      MONGO_INITDB_ROOT_PASSWORD:
+    ports:
+      - "27017:27017"
+    volumes:
+      - './mongo:/data/db'
